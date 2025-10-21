@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Shortcuts</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b0b0b">
+
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="start.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="title-container">
+      <h1 class="page-title">Keyboard Shortcuts</h1>
+    </div>
+  </header>
+
+  <footer class="foot">
+    <div class="center-btn">    
+        <a href="hero.html">
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Let's Go</span>
+            </button>
+        </a>
+    </div>  
+  </footer>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registered', reg))
+        .catch(err => console.log('Service Worker registration failed', err));
+    });
+  }
+  </script>
+
+</body>
+</html>
+  

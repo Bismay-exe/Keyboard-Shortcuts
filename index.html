@@ -3,46 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keyboard Shortcuts</title>
+  <title>Launching...</title>
+  <meta name="theme-color" content="#0b0b0b" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --accent: #ffffff;
+    }
 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0b0b0b">
+    body {
+      margin: 0;
+      height: 100vh;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
+    .logo {
+      width: 100px;
+      height: 100px;
+      background: url('assets/icons/icon-192.png') center/cover no-repeat;
+      border-radius: 25px;
+      animation: pop 0.8s ease forwards;
+    }
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="style.css" />
+    .app-name {
+      margin-top: 25px;
+      font-family: monospace;
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 1.3rem;
+      opacity: 0;
+      animation: fadeIn 1s ease 0.6s forwards;
+    }
+
+    .loader {
+      margin-top: 40px;
+      width: fit-content;
+      font-weight: bold;
+      font-family: monospace;
+      white-space: pre;
+      font-size: 24px;
+      line-height: 1.2em;
+      height: 1.2em;
+      overflow: hidden;
+      color: var(--accent);
+      opacity: 0;
+      animation: fadeIn 1s ease 0.8s forwards;
+    }
+
+    .loader:before {
+      content: "Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔";
+      white-space: pre;
+      display: inline-block;
+      animation: l39 1s infinite steps(11) alternate;
+    }
+
+    @keyframes l39 {
+      100% {
+        transform: translateY(-100%)
+      }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; transform: scale(1.1); }
+    }
+  </style>
 </head>
 <body>
-
-  <header class="main-header">
-    <div class="title-container">
-      <h1 class="page-title">Keyboard Shortcuts</h1>
-    </div>
-  </header>
-
-  <footer class="foot">
-    <div class="center-btn">    
-        <a href="hero.html">
-            <button class="learn-more">
-              <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
-              </span>
-              <span class="button-text">Let's Go</span>
-            </button>
-        </a>
-    </div>  
-  </footer>
+  <div class="logo"></div>
+  <div class="loader"></div>
 
   <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(reg => console.log('Service Worker registered', reg))
-        .catch(err => console.log('Service Worker registration failed', err));
-    });
-  }
+    // Wait 3 seconds then fade out and redirect to main app
+    setTimeout(() => {
+      document.body.style.animation = "fadeOut 0.8s forwards";
+      setTimeout(() => {
+        window.location.href = "start.html";
+      }, 800);
+    }, 3000);
   </script>
-
 </body>
 </html>
-  
