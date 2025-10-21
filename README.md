@@ -24,15 +24,15 @@
   <table>
     <tr>
       <td align="center">
-        <img src="assets/screenshots/windows.png" alt="Windows Shortcuts" width="400px" /><br>
+        <img src="assets/screenshots/screenshot1.png" alt="Windows Shortcuts" width="400px" /><br>
         <b>Windows Shortcuts</b>
       </td>
       <td align="center">
-        <img src="assets/screenshots/linux.png" alt="Linux Shortcuts" width="400px" /><br>
+        <img src="assets/screenshots/screenshot2.png" alt="Linux Shortcuts" width="400px" /><br>
         <b>Linux Shortcuts</b>
       </td>
       <td align="center">
-        <img src="assets/screenshots/macos.png" alt="MacOS Shortcuts" width="400px" /><br>
+        <img src="assets/screenshots/screenshot3.png" alt="MacOS Shortcuts" width="400px" /><br>
         <b>MacOS Shortcuts</b>
       </td>
     </tr>
@@ -83,7 +83,7 @@ Subtle animations & bounce effect
   <table>
     <tr>
       <td align="center">
-        <img src="assets/screenshots/keyboard-shortcuts.png" width="700px" alt="Keyboard Shortcuts" /><br>
+        <img src="assets/screenshots/banner.png" width="700px" alt="Keyboard Shortcuts" /><br>
         <b>⌨️ Keyboard Shortcuts ⌨️</b>
       </td>
     </tr>
