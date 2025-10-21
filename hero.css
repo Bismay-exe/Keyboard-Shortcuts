@@ -40,12 +40,22 @@
 --gap:18px;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{
-margin:0;padding-top:-30px;padding-left: 30px;padding-right: 30px;padding-bottom:30px;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
--webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding-top:-30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom:30px;
+  background-color: #0b0b0b;
+  color: var(--accent);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
+
 .page-title {
   font-family:Gendy, sans-serif;
   font-size: 78px; /* Default for desktop */

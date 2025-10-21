@@ -5,9 +5,10 @@ const CACHE_NAME = 'keyboard-shortcuts-cache-v1';
 const urlsToCache = [
   '/',                 // root
   '/index.html',
+  '/start.html',
   '/hero.html',
 
-  '/style.css',
+  '/start.css',
   '/hero.css',
 
   '/hero.js',
