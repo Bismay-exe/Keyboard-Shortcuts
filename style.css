@@ -103,7 +103,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
 
 
 /* From Uiverse.io by cssbuttons-io */ 
-.button {
+button {
  position: relative;
  display: inline-block;
  cursor: pointer;
@@ -117,12 +117,12 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  font-family: inherit;
 }
 
-.button.learn-more {
+button.learn-more {
  width: 10rem;
  height: auto;
 }
 
-.button.learn-more .circle {
+button.learn-more .circle {
  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
  position: relative;
  display: block;
@@ -133,7 +133,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  border-radius: 1.625rem;
 }
 
-.button.learn-more .circle .icon {
+button.learn-more .circle .icon {
  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
  position: absolute;
  top: 0;
@@ -142,7 +142,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  background: #0b0b0b;
 }
 
-.button.learn-more .circle .icon.arrow {
+button.learn-more .circle .icon.arrow {
  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
  left: 0.625rem;
  width: 1.125rem;
@@ -150,7 +150,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  background: none;
 }
 
-.button.learn-more .circle .icon.arrow::before {
+button.learn-more .circle .icon.arrow::before {
  position: absolute;
  content: "";
  top: -0.29rem;
@@ -162,7 +162,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  transform: rotate(45deg);
 }
 
-.button.learn-more .button-text {
+button.learn-more .button-text {
  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
  position: absolute;
  top: 0;
@@ -178,16 +178,15 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
  text-transform: uppercase;
 }
 
-.button:hover .circle {
+button:hover .circle {
  width: 100%;
 }
 
-.button:hover .circle .icon.arrow {
+button:hover .circle .icon.arrow {
  background: #0b0b0b;
  transform: translate(1rem, 0);
 }
 
-.button:hover .button-text {
+button:hover .button-text {
  color: #0b0b0b;
-}
 }
