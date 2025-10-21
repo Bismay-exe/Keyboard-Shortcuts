@@ -62,7 +62,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
   .page-title {
     font-size: 70px;
     text-align: center;
-    margin-top: 300px;
+    margin-top: 200px;
   }
 }
 
@@ -96,7 +96,7 @@ background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);
 /* Mobile view (screen width ≤ 768px) */
 @media (max-width: 480px) {
   .center-btn {
-    margin-top: 280px; /* smaller height for mobile */
+    margin-top: 190px; /* smaller height for mobile */
   }
 }
 
