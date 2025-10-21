@@ -12,52 +12,25 @@
 
   <header class="main-header">
     <div class="title-container">
-      <h1>Keyboard Shortcuts</h1>
-      <p class="subtitle">Quickly find and copy shortcuts across OSes and apps</p>
-    </div>
-
-    <div class="controls">
-      <select id="osSelect" aria-label="Select OS">
-        <option value="all">All</option>
-        <option value="windows">Windows</option>
-        <option value="linux">Linux</option>
-        <option value="macos">macOS</option>
-      </select>
-
-      <input 
-        id="search" 
-        type="text" 
-        placeholder="Search shortcuts, e.g. copy, paste, window" 
-        aria-label="Search shortcuts"
-      >
+      <h1 class="page-title">Keyboard Shortcuts</h1>
     </div>
   </header>
 
-  <section class="summary">
-    <div class="stats">
-      <div class="stat"><span id="count">0</span><small>shortcuts</small></div>
-      <div class="stat"><span id="osIndicator">All</span><small>OS</small></div>
-    </div>
-    <p class="hint">
-      Click a shortcut to copy it. Use the category chips to filter. 
-      Smooth animations, minimal black & white aesthetic.
-    </p>
-  </section>
-
-  <nav class="filters" id="categoryChips" aria-label="Categories">
-    <!-- generated chips -->
-  </nav>
-
-  <section class="grid" id="cards" aria-live="polite">
-    <!-- generated cards -->
-  </section>
-
   <footer class="foot">
-    Made with ♡ — Press any card to copy. 
-    Dark/Light is intentionally high-contrast monochrome.
+    <div class="center-btn">    
+        <a href="hero.html">
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Let's Go</span>
+            </button>
+        </a>
+    </div>  
   </footer>
 
   <!-- Link JS -->
   <script src="script.js"></script>
 </body>
 </html>
+  
