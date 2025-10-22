@@ -25,15 +25,15 @@
     <tr>
       <td align="center">
         <img src="assets/screenshots/screenshot1.png" alt="Windows Shortcuts" width="400px" /><br>
-        <b>Windows Shortcuts</b>
+        <b>Screenshot1</b>
       </td>
       <td align="center">
         <img src="assets/screenshots/screenshot2.png" alt="Linux Shortcuts" width="400px" /><br>
-        <b>Linux Shortcuts</b>
+        <b>Screenshot2</b>
       </td>
       <td align="center">
         <img src="assets/screenshots/screenshot3.png" alt="MacOS Shortcuts" width="400px" /><br>
-        <b>MacOS Shortcuts</b>
+        <b>Screenshot3</b>
       </td>
     </tr>
   </table>
