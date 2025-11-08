@@ -1,0 +1,62 @@
+import { Shortcut } from "./types";
+
+export const WINDOWS_SHORTCUTS: Shortcut[] = [
+  {os:'windows',category:'Text',title:'Copy',combo:['Ctrl','C'],desc:'Copy selected text or item'},
+  {os:'windows',category:'Text',title:'Paste',combo:['Ctrl','V'],desc:'Paste from clipboard'},
+  {os:'windows',category:'Text',title:'Cut',combo:['Ctrl','X'],desc:'Cut selected text or item'},
+  {os:'windows',category:'Text',title:'Select All',combo:['Ctrl','A'],desc:'Select everything'},
+  {os:'windows',category:'Text',title:'Undo',combo:['Ctrl','Z'],desc:'Undo last action'},
+  {os:'windows',category:'Text',title:'Redo',combo:['Ctrl','Y'],desc:'Redo last undone action'},
+  {os:'windows',category:'Text',title:'Find',combo:['Ctrl','F'],desc:'Find in application'},
+  {os:'windows',category:'Text',title:'Replace',combo:['Ctrl','H'],desc:'Find and replace'},
+  {os:'windows',category:'Text',title:'Bold',combo:['Ctrl','B'],desc:'Make text bold'},
+  {os:'windows',category:'Text',title:'Italic',combo:['Ctrl','I'],desc:'Make text italic'},
+  {os:'windows',category:'Text',title:'Underline',combo:['Ctrl','U'],desc:'Underline text'},
+  {os:'windows',category:'Text',title:'Strikethrough',combo:['Ctrl','Shift','S'],desc:'Strikethrough text'},
+  {os:'windows',category:'Text',title:'Superscript',combo:['Ctrl','Shift','+'],desc:'Make text superscript'},
+  {os:'windows',category:'Text',title:'Subscript',combo:['Ctrl','='],desc:'Make text subscript'},
+  {os:'windows',category:'Text',title:'Insert hyperlink',combo:['Ctrl','K'],desc:'Insert hyperlink'},
+  {os:'windows',category:'Text',title:'Increase font size',combo:['Ctrl','Shift','>'],desc:'Increase text size'},
+  {os:'windows',category:'Text',title:'Decrease font size',combo:['Ctrl','Shift','<'],desc:'Decrease text size'},
+
+  {os:'windows',category:'Window',title:'Switch apps',combo:['Alt','Tab'],desc:'Cycle through open apps'},
+  {os:'windows',category:'Window',title:'Switch apps backwards',combo:['Alt','Shift','Tab'],desc:'Cycle apps backward'},
+  {os:'windows',category:'Window',title:'Minimize all',combo:['Win','D'],desc:'Show desktop'},
+  {os:'windows',category:'Window',title:'Maximize window',combo:['Win','Up'],desc:'Maximize window'},
+  {os:'windows',category:'Window',title:'Snap left',combo:['Win','Left'],desc:'Snap left'},
+  {os:'windows',category:'Window',title:'Snap right',combo:['Win','Right'],desc:'Snap right'},
+  {os:'windows',category:'Window',title:'Close window',combo:['Alt','F4'],desc:'Close current window'},
+
+  {os:'windows',category:'System',title:'Task Manager',combo:['Ctrl','Shift','Esc'],desc:'Open Task Manager'},
+  {os:'windows',category:'System',title:'Settings',combo:['Win','I'],desc:'Open Settings'},
+  {os:'windows',category:'System',title:'Lock PC',combo:['Win','L'],desc:'Lock computer'},
+  {os:'windows',category:'System',title:'Run dialog',combo:['Win','R'],desc:'Run command'},
+  {os:'windows',category:'System',title:'File Explorer',combo:['Win','E'],desc:'Open Explorer'},
+  {os:'windows',category:'System',title:'Emoji panel',combo:['Win','.'],desc:'Emoji picker'},
+  {os:'windows',category:'System',title:'Quick menu',combo:['Win','X'],desc:'Quick link menu'},
+
+  {os:'windows',category:'Screenshots',title:'Fullscreen screenshot',combo:['PrtSc'],desc:'Copy screen'},
+  {os:'windows',category:'Screenshots',title:'Active window screenshot',combo:['Alt','PrtSc'],desc:'Copy active window'},
+  {os:'windows',category:'Screenshots',title:'Region screenshot',combo:['Win','Shift','S'],desc:'Select area'},
+
+  {os:'windows',category:'Virtual Desktop',title:'New desktop',combo:['Win','Ctrl','D'],desc:'Create desktop'},
+  {os:'windows',category:'Virtual Desktop',title:'Close desktop',combo:['Win','Ctrl','F4'],desc:'Close current desktop'},
+  {os:'windows',category:'Virtual Desktop',title:'Switch desktop',combo:['Win','Ctrl','Left/Right'],desc:'Switch desktops'},
+
+  {os:'windows',category:'File Explorer',title:'New folder',combo:['Ctrl','Shift','N'],desc:'New folder'},
+  {os:'windows',category:'File Explorer',title:'Rename',combo:['F2'],desc:'Rename item'},
+  {os:'windows',category:'File Explorer',title:'Properties',combo:['Alt','Enter'],desc:'File properties'},
+
+  {os:'windows',category:'Browser',title:'New tab',combo:['Ctrl','T'],desc:'New tab'},
+  {os:'windows',category:'Browser',title:'Close tab',combo:['Ctrl','W'],desc:'Close tab'},
+  {os:'windows',category:'Browser',title:'Reopen closed tab',combo:['Ctrl','Shift','T'],desc:'Reopen closed tab'},
+  {os:'windows',category:'Browser',title:'Next tab',combo:['Ctrl','Tab'],desc:'Next tab'},
+  {os:'windows',category:'Browser',title:'Previous tab',combo:['Ctrl','Shift','Tab'],desc:'Prev tab'},
+  {os:'windows',category:'Browser',title:'Zoom in',combo:['Ctrl','+'],desc:'Zoom in'},
+  {os:'windows',category:'Browser',title:'Zoom out',combo:['Ctrl','-'],desc:'Zoom out'},
+
+  {os:'windows',category:'Editor',title:'Command Palette',combo:['Ctrl','Shift','P'],desc:'VS Code palette'},
+  {os:'windows',category:'Editor',title:'Open file',combo:['Ctrl','P'],desc:'Quick open file'},
+  {os:'windows',category:'Editor',title:'Multi cursor',combo:['Ctrl','Click'],desc:'Add cursor'},
+  {os:'windows',category:'Editor',title:'Select all matches',combo:['Ctrl','Shift','L'],desc:'Select matches'},
+];

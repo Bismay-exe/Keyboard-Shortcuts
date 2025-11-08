@@ -1,0 +1,7 @@
+/* entrance animation like original */
+.grid .scale-in {
+  animation: pop .45s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes pop {
+  to { opacity:1; transform:translateY(0); }
+}
