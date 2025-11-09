@@ -9,6 +9,8 @@ export type ShortcutOS =
   | "terminal"
   | "terminal-advanced"
   | "git"
+  | "premiere"
+  | "aftereffects"
   | "blender";
 
 export interface Shortcut {

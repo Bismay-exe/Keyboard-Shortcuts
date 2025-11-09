@@ -23,6 +23,11 @@ export const WINDOWS_SHORTCUTS: Shortcut[] = [
   {os:'windows',category:'Window',title:'Switch apps backwards',combo:['Alt','Shift','Tab'],desc:'Cycle apps backward'},
   {os:'windows',category:'Window',title:'Minimize all',combo:['Win','D'],desc:'Show desktop'},
   {os:'windows',category:'Window',title:'Maximize window',combo:['Win','Up'],desc:'Maximize window'},
+  { os:"windows", category:"Window", title:"Minimize window", combo:["Win","Down"], desc:"Minimize current window" },
+  { os:"windows", category:"Window", title:"Cycle windows (same app)", combo:["Alt","`"], desc:"Switch between windows of same app" },
+  { os:"windows", category:"Window", title:"Open clipboard history", combo:["Win","V"], desc:"Copied items history" },
+  { os:"windows", category:"Window", title:"Task View", combo:["Win","Tab"], desc:"Show timeline & desktops" },
+  { os:"windows", category:"Window", title:"Open Start menu", combo:["Win"], desc:"Open Start" },
   {os:'windows',category:'Window',title:'Snap left',combo:['Win','Left'],desc:'Snap left'},
   {os:'windows',category:'Window',title:'Snap right',combo:['Win','Right'],desc:'Snap right'},
   {os:'windows',category:'Window',title:'Close window',combo:['Alt','F4'],desc:'Close current window'},
@@ -59,4 +64,33 @@ export const WINDOWS_SHORTCUTS: Shortcut[] = [
   {os:'windows',category:'Editor',title:'Open file',combo:['Ctrl','P'],desc:'Quick open file'},
   {os:'windows',category:'Editor',title:'Multi cursor',combo:['Ctrl','Click'],desc:'Add cursor'},
   {os:'windows',category:'Editor',title:'Select all matches',combo:['Ctrl','Shift','L'],desc:'Select matches'},
+
+  { os:"windows", category:"File Explorer", title:"Search", combo:["Ctrl","E"], desc:"Jump to search bar" },
+  { os:"windows", category:"File Explorer", title:"Refresh folder", combo:["F5"], desc:"Refresh Explorer" },
+  { os:"windows", category:"File Explorer", title:"Create file (Explorer ribbon)", combo:["Ctrl","Shift","Alt","N"], desc:"New file (when available)" },
+  { os:"windows", category:"File Explorer", title:"Address bar focus", combo:["Alt","D"], desc:"Select path bar" },
+  { os:"windows", category:"File Explorer", title:"Go up one folder", combo:["Alt","Up"], desc:"Navigate to parent folder" },
+
+  { os:"windows", category:"System", title:"Screenshot to file", combo:["Win","PrtSc"], desc:"Save full screenshot to Pictures" },
+{ os:"windows", category:"System", title:"Notification Center", combo:["Win","A"], desc:"Toggle action center" },
+{ os:"windows", category:"System", title:"Quick Settings", combo:["Win","A"], desc:"Quick toggles & volume" },
+{ os:"windows", category:"System", title:"Project display mode", combo:["Win","P"], desc:"Switch monitors / extend mode" },
+{ os:"windows", category:"System", title:"Connect Bluetooth / Devices", combo:["Win","K"], desc:"Wireless display/devices menu" },
+{ os:"windows", category:"System", title:"Screen Reader", combo:["Win","Ctrl","Enter"], desc:"Toggle Narrator" },
+{ os:"windows", category:"System", title:"Open Clipboard Sync Settings", combo:["Win","Alt","V"], desc:"Clipboard cloud settings" },
+
+{ os:"windows", category:"Text", title:"Delete whole word", combo:["Ctrl","Backspace"], desc:"Delete previous word" },
+{ os:"windows", category:"Text", title:"Select left word", combo:["Ctrl","Shift","Left"], desc:"Select word left" },
+{ os:"windows", category:"Text", title:"Select right word", combo:["Ctrl","Shift","Right"], desc:"Select word right" },
+{ os:"windows", category:"Text", title:"Jump to line start", combo:["Home"], desc:"Go to start of line" },
+{ os:"windows", category:"Text", title:"Jump to line end", combo:["End"], desc:"Go to end of line" },
+{ os:"windows", category:"Text", title:"Jump page down", combo:["Page Down"], desc:"Scroll down one page" },
+{ os:"windows", category:"Text", title:"Jump page up", combo:["Page Up"], desc:"Scroll up one page" },
+
+{ os:"windows", category:"Developer", title:"Open Terminal", combo:["Win","X","T"], desc:"Windows Terminal" },
+{ os:"windows", category:"Developer", title:"Open PowerShell Admin", combo:["Win","X","A"], desc:"Elevated PowerShell" },
+{ os:"windows", category:"Developer", title:"Search apps & files", combo:["Win","S"], desc:"Open search" },
+{ os:"windows", category:"Developer", title:"Quick screenshot + editor", combo:["Win","Shift","S"], desc:"Snip & Sketch" }, // improve clarity for snip
+{ os:"windows", category:"Developer", title:"Open Explorer home", combo:["Win","E"], desc:"Explorer home" },
+
 ];
