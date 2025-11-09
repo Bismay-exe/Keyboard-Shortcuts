@@ -39,7 +39,7 @@ export default function NavBar() {
         className="font-gendy text-xl text-white relative"
         onMouseMove={(e) => setHoverX(e.clientX)}
       >
-        <img className="size-6" src="/assets/logo/ks-white.png" alt="Logo" />
+        <img className="size-6" src="/assets/logo/ks-white.png" alt="" />
       </Link>
 
       {/* Desktop Nav Links */}
