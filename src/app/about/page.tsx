@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="relative w-full h-[45vh] md:h-[55vh] mb-24 overflow-hidden rounded-2xl border border-white/10 bg-[#111]">
 
         <div className="absolute inset-0 flex items-center justify-center text-white/20 font-mono text-xs tracking-widest">
-          <img src="/assets/logo/hero0.png" alt="" />
+          <img src="/Keyboard-Shortcuts/assets/logo/hero0.png" alt="" />
         </div>
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/80" />
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <div className="mockup-phone border-[#8d8d8d]">
             <div className="mockup-phone-camera"></div>
             <div className="mockup-phone-display">
-              <img alt="wallpaper" src="/assets/logo/mobile.png" />
+              <img alt="wallpaper" src="/Keyboard-Shortcuts/assets/logo/mobile.png" />
             </div>
           </div>
         </div>
