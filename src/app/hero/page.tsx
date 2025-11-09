@@ -35,7 +35,7 @@ export default function HeroPage() {
 
   return (
     <main className="pt-16 md:pt-16 min-h-screen text-white px-6 py-10">
-      <NavBar2 />
+      
 
       <Header
         os={os}

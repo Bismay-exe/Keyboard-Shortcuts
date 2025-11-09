@@ -5,6 +5,7 @@ import NavBar from "./components/Navbar";
 import NavBar2 from "./components/Navbar";
 import CommandPalette from "./components/CommandPalette";
 import CmdSound from "./components/CmdSound";
+import AIConsole from "./components/AIConsole";
 
 export const metadata: Metadata = {
   title: "Keyboard Shortcuts",
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body className="bg-[#0b0b0b] text-white antialiased min-h-screen ">
         <NavBar2 />
         <CommandPalette />
+        <AIConsole />
         <CmdSound />
         {children}
       </body>

@@ -1,152 +1,166 @@
 "use client";
 
-import { useState } from "react";
-import { useReveal } from "@/lib/useReveal";
-import { useScrollPos } from "@/lib/useScrollPos";
-import FounderSignature from "./components/FounderSignature";
-import Timeline from "./components/Timeline";
-import { useSectionPulse } from "@/lib/useSectionPulse";
-import DevBadge from "./components/DevBadge";
-import SecretConsole, { consoleActiveState } from "./components/SecretConsole";
-import SectionIndicator from "./components/SectionIndicator";
-import { useSectionIndex } from "@/lib/useSectionIndex";
+import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AboutPage() {
-  useReveal();
-
-  const [offset, setOffset] = useState(0);
-
-  useScrollPos((y) => {
-    setOffset(y * 0.12); // smooth parallax
-  });
-
-  useSectionPulse();
-
-
-  const sectionIndex = useSectionIndex();
-
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   return (
-    <main className="pt-14 md:pt-0 min-h-screen bg-[#0b0b0b] text-white overflow-x-hidden">
-        <DevBadge active={consoleActiveState.active} />
-        <SectionIndicator index={sectionIndex} total={4} />
+    <main className="min-h-screen bg-black text-white px-6 md:px-12 py-32 space-y-32">
 
-      
       {/* Hero */}
-      <section className="min-h-[60vh] flex flex-col items-center justify-center px-6 text-center" data-section>
-        <h1
-          className="font-gendy text-[12vw] md:text-[6vw] leading-none mb-3"
-          style={{ transform: `translateY(${offset}px)` }}
-        >
-          About This Project
+      <section className="max-w-4xl mx-auto text-center">
+        <h1 className="font-[Gendy] text-6xl md:text-8xl font-bold tracking-tight">
+          Built For People Who Hate Wasting Time
         </h1>
-        <p
-          className="text-white/70 text-lg md:text-xl tracking-wider uppercase"
-          data-reveal
-        >
-          Built for speed, clarity, mastery
+        <p className="mt-6 text-lg text-white/60">
+          No fancy BS. Just speed, clarity, and tools that respect your brain.
         </p>
+      </section>
+
+      {/* Minimal Hero Banner */}
+      <section className="relative w-full h-[45vh] md:h-[55vh] mb-24 overflow-hidden rounded-2xl border border-white/10 bg-[#111]">
+
+        <div className="absolute inset-0 flex items-center justify-center text-white/20 font-mono text-xs tracking-widest">
+          <img src="/assets/logo/hero0.png" alt="" />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/80" />
+
+
+        <div className="absolute top-18 md:right-18 right-100">
+          <div className="mockup-phone border-[#8d8d8d]">
+            <div className="mockup-phone-camera"></div>
+            <div className="mockup-phone-display">
+              <img alt="wallpaper" src="/assets/logo/mobile.png" />
+            </div>
+          </div>
+        </div>
+
+
+        <div className="absolute bottom-8 left-8">
+          <h2 className="font-[Gendy] text-4xl md:text-6xl font-bold">
+            About
+          </h2>
+          <p className="mt-2 text-white/60 text-sm md:text-base">
+            No filler. Just intent, speed & craft.
+          </p>
+        </div>
       </section>
 
       {/* Mission */}
-      <section className="py-24 px-6 max-w-3xl mx-auto" data-section>
-        <h2 className="text-4xl md:text-5xl font-gendy mb-8" data-reveal>
-          Our Mission
-        </h2>
-
-        <p className="text-lg md:text-xl leading-relaxed text-white/80 mb-6" data-reveal>
-          This tool exists for anyone obsessed with efficiency. Keyboard shortcuts are the purest,
-          fastest way to communicate with a computer — direct intent to action.
+      <section className="max-w-3xl mx-auto space-y-6">
+        <h2 className="text-3xl font-bold">Why this exists</h2>
+        <p className="text-white/70 text-lg leading-relaxed">
+          Computers are fast. Humans aren’t — unless we remove friction.
         </p>
-
-        <p className="text-lg md:text-xl leading-relaxed text-white/80" data-reveal>
-          Our mission is to make discovery and practice frictionless, beautiful, and addictive —
-          turning shortcuts into muscle memory through design and motion.
+        <p className="text-white/70 text-lg leading-relaxed">
+          This project trains instinct. Not shortcuts — mindset.
         </p>
       </section>
 
-      {/* Engineered for performance */}
-      <section className="py-24 px-6 border-y border-white/10 bg-white/[0.01]" data-section>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="font-gendy text-4xl md:text-5xl mb-12" data-reveal>
-            Engineered for Performance
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div className="space-y-6" data-reveal>
-              <p className="text-lg text-white/80 leading-relaxed">
-                This isn't a UI toy. It's a study in precision — ultra-responsive motion, GPU
-                transforms, and zero-noise interaction.
-              </p>
-              <p className="text-lg text-white/80 leading-relaxed">
-                Every micro-interaction is tuned to feel direct, tactile, and satisfying —
-                engineered like a tool, not themed like a toy.
-              </p>
+      {/* Timeline */}
+      <section className="max-w-3xl mx-auto space-y-12">
+        <h2 className="text-3xl font-bold">Timeline</h2>
+        <div className="space-y-6 border-l border-white/10 pl-6">
+          {[
+            ["2024", "Initial build — keyboard-first UI"],
+            ["2025", "Smart search, worker scoring, dev console"],
+            ["Future", "AI-driven habit loops & adaptive drills"]
+          ].map(([year, text]) => (
+            <div key={year} className="flex flex-col">
+              <span className="text-sm text-white/40">{year}</span>
+              <span className="text-white/80">{text}</span>
             </div>
-
-            <div
-              className="
-                bg-white/5 border border-white/10 rounded-2xl
-                p-8 backdrop-blur-md shadow-[0_0_40px_rgba(255,255,255,0.06)]
-              "
-              data-reveal
-            >
-              <div className="space-y-4 text-sm font-mono text-white/70 tracking-wide">
-                <p className="text-white/50 uppercase text-xs">Stack</p>
-
-                <div className="space-y-2">
-                  <p>{">"} Next.js (App Router)</p>
-                  <p>{">"} RSC + selective client surfaces</p>
-                  <p>{">"} Tailwind — zero component library</p>
-                  <p>{">"} GPU motion, CSS-driven physics</p>
-                  <p>{">"} Intersection reveal engine</p>
-                  <p>{">"} Turbopack dev</p>
-                </div>
-
-                <p className="text-white/50 uppercase text-xs pt-4">Principles</p>
-
-                <div className="space-y-2">
-                  <p>{">"} Minimal JS, maximum feel</p>
-                  <p>{">"} Motion with purpose</p>
-                  <p>{">"} Craft {">"} complexity</p>
-                  <p>{">"} Clarity over flash</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Founder Philosophy */}
-      <section className="py-28 px-6 max-w-3xl mx-auto" data-section>
-        <div data-reveal>
-          <h2 className="font-gendy text-4xl md:text-5xl mb-8">Why This Exists</h2>
-
-          <div className="space-y-6 text-white/80 text-lg leading-relaxed">
-            <p>Software should feel sharp — precise, intentional, and silent in its excellence.</p>
-            <p>
-              I built this because tools should <span className="text-white font-medium">
-              make you faster</span>, not impress you for 5 seconds and slow you forever.
-            </p>
-            <p>
-              Shortcuts are the purest form of computing: no UI, no hesitation — just thought → action.
-            </p>
-            <p className="italic text-white/60">
-              And yes — if a task requires the mouse, I already hate it.
-            </p>
-          </div>
+      {/* Stack */}
+      <section className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6">Engine</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          {[
+            "Next.js",
+            "React",
+            "Tailwind",
+            "Web Workers",
+            "RSC",
+            "GPU Animations",
+            "Indexed Cache",
+            "Command Palette"
+          ].map((item) => (
+            <div key={item} className="p-3 border border-white/10 rounded-xl text-center text-white/60">
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
-      <FounderSignature />
-      <SecretConsole />
+      {/* Team */}
+      <section className="max-w-3xl mx-auto space-y-4">
+        <h2 className="text-3xl font-bold">The "Team"</h2>
+        <p className="text-white/70 text-lg">It's just me. And caffeine. And spite.</p>
+      </section>
 
-      <Timeline />
+      {/* Values */}
+      <section className="max-w-3xl mx-auto grid md:grid-cols-3 gap-6">
+        {[["Speed","If it slows you down, it's dead."],
+          ["Clarity","No clutter. No noise."],
+          ["Precision","Every interaction is intentional."]].map(([title, desc]) => (
+          <div key={title} className="p-6 border border-white/10 rounded-xl space-y-2">
+            <h3 className="font-semibold text-lg">{title}</h3>
+            <p className="text-white/60 text-sm">{desc}</p>
+          </div>
+        ))}
+      </section>
 
-      {/* Footer */}
-      <footer className="py-10 text-center text-white/40 text-sm border-t border-white/10">
-        &copy; {new Date().getFullYear()} — Crafted for speed & intent.
-      </footer>
+      {/* Stats */}
+      <section className="max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-6">
+        {[
+          ["15k+", "Shortcuts indexed"],
+          ["0.7ms", "Search latency"],
+          ["∞", "Keyboard hate for mice"],
+          ["100%", "Over-engineered"]
+        ].map(([num, label]) => (
+          <div key={label}>
+            <div className="text-2xl font-bold">{num}</div>
+            <div className="text-white/50 text-xs uppercase">{label}</div>
+          </div>
+        ))}
+      </section>
+
+      {/* Keyboard Philosophy */}
+      <section className="max-w-3xl mx-auto space-y-6">
+        <h2 className="text-3xl font-bold">Keyboard {">"} Mouse</h2>
+        <p className="text-white/70 text-lg">
+          Clicking is hesitation. Keyboard is intent.
+          Anything that interrupts flow slows you down.
+        </p>
+      </section>
+
+      {/* Personal Note */}
+      <section className="max-w-3xl mx-auto text-white/70 text-lg">
+        I didn’t build this to show off. I built it because I was tired of slow software and slower habits.
+        If this helps even one person move faster — mission accomplished.
+      </section>
+
+      {/* CTA */}
+      <section className="flex justify-center top-4 text-center pb-10">
+        <Link
+          href="https://github.com/Bismay-exe"
+          className="inline-flex items-center px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition"
+        >
+          GitHub
+          <motion.div animate={{ x: [0, 4, 0] }} transition={{ duration: 1.4, repeat: Infinity }}>
+            <ArrowRight className="w-5 h-7 ml-3" />
+          </motion.div>
+        </Link>
+      </section>
     </main>
   );
 }
