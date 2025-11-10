@@ -105,7 +105,7 @@ Subtle animations & bounce effect
 ## 🛠️ Tech Stack  
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,css,ts,js,workers,&theme=dark" />
 </p>
 
 ---
